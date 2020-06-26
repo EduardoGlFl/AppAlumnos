@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>Añadir Alumno</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-item>
+    <ion-label>Numero Control</ion-label>
+    <ion-input [(ngModel)]="data.numeroControl" placeholder="Numero Control"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Nombre</ion-label>
+    <ion-input [(ngModel)]="data.nombreAlumno" placeholder="Nombre"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Carrera</ion-label>
+    <ion-input [(ngModel)]="data.carrera" placeholder="Carrera"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Telefono</ion-label>
+    <ion-input [(ngModel)]="data.telefono" placeholder="Telefono"></ion-input>
+  </ion-item>
+
+
+
+  <ion-item>
+    <ion-button (click)="submitForm()">Añadir
+    </ion-button>
+  </ion-item>
+
+</ion-content>

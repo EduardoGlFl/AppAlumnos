@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>Alumnos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Numero Control</th>
+        <th scope="col">Carrera</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let alumnos of lista; let i = index">
+        <td>{{ alumnos.id }}</td>
+        <td>{{ alumnos.nombre }}</td>
+        <td>{{ alumnos.numeroControl }}</td>
+        <td>{{ alumnos.nombreCarrera }}</td>
+        <td style="display: flex">
+          <ion-button color="warning" size="small" routerLink='/student-edit/{{alumnos.id}}'>
+            <ion-icon name="create"></ion-icon>
+          </ion-button>
+
+          <ion-button color="danger" size="small" (click)="delete(alumnos)">
+            <ion-icon name="trash"></ion-icon>
+          </ion-button>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <ion-button [routerLink]="['/student-create']">
+    Nuevo Alumno
+  </ion-button>
+</ion-content>
